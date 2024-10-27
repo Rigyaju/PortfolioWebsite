@@ -1,0 +1,134 @@
+*{
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+}
+/*BACKGROUND IMAGE FORMATTING*/
+/*Format the image and add colour overlay*/
+.header{
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(20, 50, 32, 0.95), rgba(59, 172, 102, 0.5)), url(assets/images/forest_aqua.jpg);
+        background-position:center;
+        background-size: cover;
+        position: relative;
+}
+/*NAVIGATION BAR FORMATTING*/
+nav{
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+}
+/*Arrange the links*/
+.nav-links{
+        flex: 1;
+        text-align: right;
+}
+/*Make the list horizontal*/
+.nav-links ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+}
+/*Format navigation bar text*/
+.nav-links ul li a{
+        color: rgb(250, 250, 250);
+        text-decoration: none;
+        font-size: 16px;
+}
+/*format the navigation bar*/
+.nav-links ul li::after{
+        content: '';
+        width: 0%;
+        height: 3px;
+        background: #E8871E;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+}
+/* format the hover animation*/
+.nav-links ul li:hover::after{
+        width: 100%;
+}
+/*FORMAT CENTER PARAGRAPH*/
+.text-box{
+        width: 90%; 
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+}
+/*font size for just the title part of the text box*/
+.text-box h1{
+        font-size: 62px;
+}
+
+.text-box p{
+        margin: 10px 0 15px;
+        font-size: 25px;
+        color: #fff;
+}
+
+/* hiding the hamburger menu icons for full screen- added back later */
+nav .material-icons{
+        display: none;
+}
+
+/*responsive view for narrow-er devices*/
+@media(max-width: 900px){
+        /* text box font ize*/
+        .text-box h1{
+                font-size: 45px;
+        }
+        .text-box p{
+                font-size: 20px;
+        }
+        /* put navigation bar into a hamburger menu */
+
+        .nav-links ul li{
+                display: block;
+        }
+        .nav-links{
+                position: absolute;
+                background: #edb458;
+                height: 100vh; /* 100% of the viewport height (viewport is the webpage visable to user) */
+                width: 150px;
+                top: 0;
+                right: -200px; /* add transition */
+                text-align: left;
+                z-index: 2; /*makes it appear on top */
+                transition: 0.5s;
+        }
+        .nav-links ul li a{
+                color: #000000;
+        }
+
+        /* format the close icon */
+        nav .material-icons{
+                display: block;
+                color: #000000;
+                margin: 10px;
+                font-size: 20px;
+                text-align: right;
+                cursor: pointer; /*set the curser to change when hovered over */
+        }
+
+        /* add some padding specifically to ul part which is what contains all the list items li for the navigation bar*/
+        .nav-links ul{
+                padding: 25px;
+        }
+
+        #menu-icon{
+                color: #fff;
+                position: absolute;
+                right: 0;
+                top: 0;
+        }
+
+
+        
+}
