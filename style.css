@@ -132,3 +132,25 @@ nav .material-icons{
 
         
 }
+
+/* skills section */
+
+.skills{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+}
+
+h1{
+        font-size: 36px;
+        font-weight: 600;
+}
+
+p{
+        color: #2B814C;
+        font-size: 16 px;
+        font-weight: 300;
+        line-height: 22px;
+        padding: 10px;
+}
