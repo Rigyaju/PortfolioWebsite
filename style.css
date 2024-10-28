@@ -80,7 +80,7 @@ nav .material-icons{
 
 /*responsive view for narrow-er devices*/
 @media(max-width: 900px){
-        /* text box font ize*/
+        /* text box font size*/
         .text-box h1{
                 font-size: 45px;
         }
@@ -148,9 +148,52 @@ h1{
 }
 
 p{
-        color: #2B814C;
+        color: #000000;
         font-size: 16 px;
         font-weight: 300;
         line-height: 22px;
         padding: 10px;
+}
+
+/* Formatting the rows for skills*/
+.row{
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+}
+
+.col{
+        flex-basis: 31%;
+        background: #ffffff;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+}
+
+h3{
+        text-align: center;
+        font-weight: 600;
+        margin: 10px 0;
+        color: #E8871E;
+        font-size: 28px;
+}
+
+.col:hover{
+        box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+/*grid size for the next sections*/
+@media(max-width:700px){
+        .row{
+                flex-direction: column;
+        }
+}
+
+/*projects section */
+.projects{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
 }
