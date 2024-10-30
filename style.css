@@ -1,3 +1,12 @@
+:root {
+        --color-main: #2B814C;
+        --color-accent: #E8871E;
+        --color-accent2: #EDB458;
+        --color-bg1: #efefef;
+
+}
+
+
 *{
         margin: 0;
         padding: 0;
@@ -34,7 +43,7 @@ nav{
 }
 /*Format navigation bar text*/
 .nav-links ul li a{
-        color: rgb(250, 250, 250);
+        color: #fff;
         text-decoration: none;
         font-size: 16px;
 }
@@ -43,7 +52,7 @@ nav{
         content: '';
         width: 0%;
         height: 3px;
-        background: #E8871E;
+        background: var(--color-accent);
         display: block;
         margin: auto;
         transition: 0.5s;
@@ -94,7 +103,7 @@ nav .material-icons{
         }
         .nav-links{
                 position: absolute;
-                background: #edb458;
+                background: var(--color-accent2);
                 height: 100vh; /* 100% of the viewport height (viewport is the webpage visable to user) */
                 width: 150px;
                 top: 0;
