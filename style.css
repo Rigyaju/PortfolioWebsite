@@ -3,7 +3,7 @@
         --color-accent: #E8871E;
         --color-accent2: #EDB458;
         --color-bg1: #efefef;
-
+        --color-bg2: #EBF5DF;
 }
 
 
@@ -142,13 +142,14 @@ nav .material-icons{
         
 }
 
-/* skills section */
+/* ----skills section---- */
 
 .skills{
-        width: 80%;
+        width: 100%;
         margin: auto;
         text-align: center;
         padding-top: 100px;
+        background-color: var(--color-bg1);
 }
 
 h1{
@@ -166,6 +167,8 @@ p{
 
 /* Formatting the rows for skills*/
 .row{
+        margin-left: 6%;
+        margin-right: 6%;
         margin-top: 5%;
         display: flex;
         justify-content: space-between;
@@ -199,10 +202,53 @@ h3{
         }
 }
 
-/*projects section */
+/*----projects section----*/
 .projects{
-        width: 80%;
+        width: 100%;
         margin: auto;
         text-align: center;
         padding-top: 100px;
+        background-color: var(--color-bg1);
+}
+.proj-col{
+        flex-basis: 32%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        position: relative; 
+        overflow: hidden;
+}
+.proj-col img{
+        width: 100%;
+        display:block;
+}
+.layer{
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+}
+.layer:hover{
+        background:rgba(0, 0, 0, 0.5);
+}
+
+.layer h3{
+        width: 80%;
+        font-weight: 500;
+        color:#fff;
+        font-size: 26px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        transition: 0.5s;
+        opacity: 0;
+}
+
+.layer:hover h3{
+        bottom: 30%;
+        opacity: 1;
+
 }
